@@ -8,7 +8,7 @@ import math
 # Load model and scaler
 @st.cache_resource
 def load_model_and_scaler():
-    model = load_model("impurity_nn_model.h5", compile=False)
+    model = load_model("nn_model.h5", compile=False)
     scaler = joblib.load("scaler.pkl")
     return model, scaler
 
@@ -17,7 +17,7 @@ model, scaler = load_model_and_scaler()
 # Load dataset for threshold lookup
 @st.cache_data
 def load_threshold_data():
-    file_path = r"C:\Users\nalla\OneDrive\Desktop\Food Thresholds Project\cleaned_with_log_applied.xlsx"
+    file_path = r"./cleaned_with_log_applied.xlsx"
 
     df = pd.read_excel(file_path)
     return df
