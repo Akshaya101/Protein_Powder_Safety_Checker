@@ -11,7 +11,7 @@ import joblib
 from tensorflow.keras.utils import plot_model
 
 # Load dataset
-file_path = r"C:\Users\nalla\OneDrive\Desktop\Food Thresholds Project\cleaned_with_log_applied.xlsx"
+file_path = r"./cleaned_with_log_applied.xlsx"
 df = pd.read_excel(file_path)
 
 # Define features and corrected target
